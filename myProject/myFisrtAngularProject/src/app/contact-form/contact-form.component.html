@@ -1,0 +1,37 @@
+
+<pre>{{contactForm.value | json}}</pre>
+
+<h1>Formulario de contacto</h1>
+
+<form (ngSubmit)="onSubmit(contactForm.value)" #contactForm="ngForm">
+    <div class="mb-4">
+        <label for="" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name" name="nombre" [(ngModel)]="model.nombre" required #nombre="ngModel">
+        <div [hidden]="nombre.valid || nombre.pristine" class="alert alert-danger">Campo obligatorio</div>
+    </div>
+
+    <div class="mb-4 form-check">
+        <label for="checkAge" class="form-label">Eres mayor de edad?</label>
+        <input type="checkbox" class="form-check-input" id="name" name="checkAge" [(ngModel)]="model.checkAge">
+    </div>
+
+    <div class="mb-4">
+        <label for="rrss" class="form-label">Red de contacto</label>
+        <select name="rrss" id="rrss" class="form-select form-select-sm" [(ngModel)]="model.rrss" required #rrss="ngModel">
+            <option value="ig">Instagram</option>
+            <option value="twt">Twitter</option>
+            <option value="fb">Facebook</option>
+        </select>
+        <div [hidden]="rrss.valid || rrss.pristine" class="alert alert-danger">Campo obligatorio</div>
+    </div>
+
+    <div class="mb-4">
+        <label for="" class="form-label">Nombre de usuario</label>
+        <input type="text" class="form-control" id="username" placeholder="Escriba aqui..." name="username" [(ngModel)]="model.username" required #username="ngModel">
+        <div [hidden]="username.valid || username.pristine" class="alert alert-danger">Campo obligatorio</div>
+    </div>
+
+    <div class="sendBtn float-end">
+        <button type="send" class="btn btn-info btn-lg" [disabled]="contactForm.invalid">Enviar</button>
+    </div>
+</form>
