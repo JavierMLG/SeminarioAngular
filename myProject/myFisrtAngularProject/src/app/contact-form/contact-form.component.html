@@ -5,18 +5,18 @@
 
 <form (ngSubmit)="onSubmit(contactForm.value)" #contactForm="ngForm">
     <div class="mb-4">
-        <label for="" class="form-label">Nombre</label>
+        <label for="" class="form-label">{{ "name" | translate}}</label>
         <input type="text" class="form-control" id="name" name="nombre" [(ngModel)]="model.nombre" required #nombre="ngModel">
         <div [hidden]="nombre.valid || nombre.pristine" class="alert alert-danger">Campo obligatorio</div>
     </div>
 
     <div class="mb-4 form-check">
-        <label for="checkAge" class="form-label">Eres mayor de edad?</label>
+        <label for="checkAge" class="form-label">{{ "checkAge" | translate}}</label>
         <input type="checkbox" class="form-check-input" id="name" name="checkAge" [(ngModel)]="model.checkAge">
     </div>
 
     <div class="mb-4">
-        <label for="rrss" class="form-label">Red de contacto</label>
+        <label for="rrss" class="form-label">{{ "contact" | translate}}</label>
         <select name="rrss" id="rrss" class="form-select form-select-sm" [(ngModel)]="model.rrss" required #rrss="ngModel">
             <option value="ig">Instagram</option>
             <option value="twt">Twitter</option>
@@ -26,7 +26,7 @@
     </div>
 
     <div class="mb-4">
-        <label for="" class="form-label">Nombre de usuario</label>
+        <label for="" class="form-label">{{ "username" | translate}}</label>
         <input type="text" class="form-control" id="username" placeholder="Escriba aqui..." name="username" [(ngModel)]="model.username" required #username="ngModel">
         <div [hidden]="username.valid || username.pristine" class="alert alert-danger">Campo obligatorio</div>
     </div>
