@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import {SharingService } from '../core/services/sharing.service';
 
 @Component({
@@ -10,11 +11,11 @@ export class ContactFormComponent implements OnInit {
 
   model = {
     name: "",
-    age: true,
+    age: false,
     rrss: "",
     username: ""
   }
-  constructor(public sharingService: SharingService) { }
+  constructor(private sharingService: SharingService) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +28,6 @@ export class ContactFormComponent implements OnInit {
       age: this.model.age,
       rrss: this.model.rrss,
       username: this.model.username};
-    console.log(this.sharingService.sharingObservableData)
+    console.log(this.sharingService.sharingObservableData);
   }
 }

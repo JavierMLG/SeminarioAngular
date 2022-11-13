@@ -17,6 +17,7 @@ import { ShowDataComponent } from './show-data/show-data.component';
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+
 @NgModule({
   declarations: [
     AppComponent,
