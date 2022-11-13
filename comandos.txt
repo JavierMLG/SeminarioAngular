@@ -1,0 +1,17 @@
+npm install -g npm@latest (instalar node)
+
+npm cache clean --force
+	
+npm audit set false
+
+npm uninstall -g @angular/cli
+
+npm cache clean --force
+	
+npm install -g @angular/cli@latest
+	
+npm install bootstrap jquery @popperjs/core
+
+npm install @ngx-translate/core @ngx-translate/http-loader --save
+	
+PowerShell Admin: get-executionpolicy remotesigned
