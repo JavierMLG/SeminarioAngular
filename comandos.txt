@@ -14,4 +14,4 @@ npm install bootstrap jquery @popperjs/core
 
 npm install @ngx-translate/core @ngx-translate/http-loader --save
 	
-PowerShell Admin: get-executionpolicy remotesigned
+PowerShell Admin: set-executionpolicy remotesigned
